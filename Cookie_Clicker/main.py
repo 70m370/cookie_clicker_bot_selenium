@@ -7,7 +7,7 @@ from functions import *
 def bot_loop1():
     while True:
         cookie_upgrade()
-        time.sleep(4)
+        time.sleep(3.5)
 
 def bot_loop2():
     while True:
