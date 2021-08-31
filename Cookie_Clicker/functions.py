@@ -23,6 +23,8 @@ def cookie_upgrade():
             return 0
         except selenium.common.exceptions.StaleElementReferenceException:
             return 0
+         except selenium.common.exceptions.ElementClickInterceptedException:
+            return 0
         time.sleep(0.5)
         return 1
     
@@ -39,4 +41,5 @@ def cookie_workers():
             return 0
         except selenium.common.exceptions.ElementClickInterceptedException:
             return 0
+        time.sleep(0.5)
         return 1
