@@ -4,6 +4,17 @@ import engine
 from engine import *
 
 time.sleep(4)   # wait for the page load
+
+def url_check():
+    actual_url = driver.current_url
+    while True:
+        if actual_url != ('https://orteil.dashnet.org/cookieclicker/'):
+            driver.get('https://orteil.dashnet.org/cookieclicker/')
+            print("url has changed")
+            return 1
+        else:
+            return 0
+
 def cookie_click():
     while 1 < 10:
         try:
