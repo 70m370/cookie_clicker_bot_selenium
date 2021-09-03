@@ -19,6 +19,10 @@ def bot_loop3():
         cookie_click()
         time.sleep(1)
 
+def bot_loop4():
+    while True:
+        url_check()
+        
 thread1 = threading.Thread(target=bot_loop1)
 thread1.start()
 
@@ -27,3 +31,6 @@ thread2.start()
 
 thread3 = threading.Thread(target=bot_loop3)
 thread3.start()
+
+thread4 = threading.Thread(target=bot_loop4())
+thread4.start()
