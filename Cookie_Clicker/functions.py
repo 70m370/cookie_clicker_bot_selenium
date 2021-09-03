@@ -4,12 +4,22 @@ import engine
 from engine import *
 
 time.sleep(4)   # wait for the page load
-
 def cookie_click():
-    big_cookie = driver.find_element_by_xpath('//*[@id="bigCookie"]')
-    print("start clicking !!")
     while 1 < 10:
-        big_cookie.click()
+        try:
+            big_cookie = driver.find_element_by_xpath('//*[@id="bigCookie"]')
+            print("start clicking !!")
+            while 1 < 10:
+                big_cookie.click()
+        except NoSuchElementException:
+            return 0
+        except selenium.common.exceptions.ElementNotInteractableException:
+            return 0
+        except selenium.common.exceptions.StaleElementReferenceException:
+            return 0
+        except selenium.common.exceptions.ElementClickInterceptedException:
+            return 0
+        return 1
 
 def cookie_upgrade():
     while 1 < 10:
