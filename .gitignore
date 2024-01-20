@@ -2,3 +2,6 @@
 Cookie_Clicker/__pycache__/functions.cpython-39.pyc
 Cookie_Clicker/__pycache__/engine.cpython-39.pyc
 plan.txt
+__pycache__
+*.pyc
+
